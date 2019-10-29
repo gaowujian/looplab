@@ -1,0 +1,55 @@
+body {
+    background-color: #333;
+    color: white;
+}
+
+#main-nav {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#home {
+    background-image: url("./img/home.jpg");
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    background-position: bottom;
+    position: relative;
+    /* background-image是基于区域大小的，而不是基于内容，所以最好是给一个min-height */
+    min-height: 700px;
+}
+
+/* * 不建议使用伪元素，因为还有内容显示，而不仅仅是为对背景图片做操作，所以更好的解决方案是创建一个内层的元素，让背景颜色透明 */
+/* #home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+} */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#home .inner-home {
+    padding-top: 150px;
+}
+
+#home .fas,
+.create-section .fas {
+    color: #008ed6;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.explore-section .fas {
+    color: white;
+    background: black;
+    padding: 5px;
+    border-radius: 5px;
+}
